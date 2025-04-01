@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,22 +142,155 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Tasks.html'>Next</a> >> Tasks<br /><h1>About</h1>
-<p>課程名稱: 協同產品設計實習 - Collaborative Product Design Practice</p>
-<p>41023216</p>
-<p>學員作業網站: <a href="https://mdecd2025.github.io/hw-41023216/">https://mdecd2025.github.io/hw-41023216/</a></p>
-<p>學員作業倉儲: <a href="https://github.com/mdecd2025/hw-41023216">https://github.com/mdecd2025/hw-41023216 </a></p>
-<hr/>
-<p>課程代號: cd2025</p>
-<p>Teams 線上教學:</p>
-<p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
-<p style="padding-left: 30px;">Teams 團隊代碼: <span>p5z4eku</span></p>
-<hr/>
-<p>課程評分:</p>
-<p style="padding-left: 30px;">Homework (30%) - 每週至少提交兩次與課程進度有關的內容, 完成後填回自評表單</p>
-<p style="padding-left: 30px;">Exam (40%) - 建立包含操作流程影片、心得以及提供檔案下載的網頁後填回自評表單</p>
-<p style="padding-left: 30px;">Final Report (30%) - 利用網頁內容進行簡報並提交 pdf 格式書面報告, 完成後填回自評表</p>
-<br /> <a href='Tasks.html'>Next</a> >> Tasks</div>
+    <div id="tipue_search_content">問題四 << <a href='問題四.html'>Previous</a> <a href='問題六.html'>Next</a> >> 問題六<br /><h1>問題五</h1>
+<p>在 Webots 中建立一個場景並進行手動設置，可以分為幾個步驟來完成。以下是根據文章中的一些步驟說明如何手動建立場景，這些步驟包括創建新模擬、設置燈光、修改牆壁的外觀、將現有外觀應用於球體、從磁碟上添加紋理以及設置渲染選項。</p>
+<p><br/>1. <strong>創建新模擬 (New Simulation)</strong></p>
+<p>首先，我們需要創建一個新的模擬環境。以下是手動創建的步驟：</p>
+<ol>
+<li>
+<p><strong>打開 Webots</strong>。</p>
+</li>
+<li>
+<p><strong>選擇 File / New World</strong> 開啟一個新的場景。</p>
+</li>
+<li>
+<p>為新的世界命名（例如，<code inline="">appearance.wbt</code>），然後保存它。</p>
+</li>
+</ol>
+<p>這樣就會創建一個基礎的世界，你可以在此世界中添加物體、燈光、紋理等。</p>
+<p><br/>2. <strong>設置燈光 (Lights)</strong></p>
+<p>Webots 支援不同類型的燈光，這裡我們會使用三種燈光節點：<code inline="">DirectionalLight</code>、<code inline="">PointLight</code> 和 <code inline="">SpotLight</code>。設置燈光步驟如下：</p>
+<ol>
+<li>
+<p>在左側的 <strong>Scene Tree</strong> 中右鍵點擊空白處，選擇 <strong>Add / Light</strong>。</p>
+</li>
+<li>
+<p>你可以選擇不同的燈光節點：</p>
+<ul>
+<li>
+<p><strong>DirectionalLight</strong>：模擬太陽光等無限遠的光源。</p>
+</li>
+<li>
+<p><strong>PointLight</strong>：模擬燈泡等從一點發射的光。</p>
+</li>
+<li>
+<p><strong>SpotLight</strong>：模擬手電筒等圓錐形光源。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>如果要加入陰影，可以在燈光節點中啟用 <strong>cast shadows</strong>。</p>
+</li>
+</ol>
+<h4>進階設置：</h4>
+<ul>
+<li>
+<p>每個燈光節點都可以調整顏色、強度和方向。</p>
+</li>
+<li>
+<p>若要添加背景光，選擇 <strong>TexturedBackgroundLight</strong> 節點來實現背景燈光，這樣燈光強度和方向會根據場景的背景自動計算。</p>
+</li>
+</ul>
+<p><br/>3. <strong>修改牆壁外觀 (Modify the Appearance of the Walls)</strong></p>
+<p>為牆壁設定顏色和材質，我們將使用 <code inline="">Appearance</code> 或 <code inline="">PBRAppearance</code> 節點來設置外觀屬性。</p>
+<ol>
+<li>
+<p>找到場景中的牆壁，通常會是 <strong>Shape</strong> 節點。</p>
+</li>
+<li>
+<p>在 <strong>Shape</strong> 節點下，右鍵點擊 <strong>Appearance</strong> 或 <strong>PBRAppearance</strong> 節點。</p>
+</li>
+<li>
+<p>設置以下屬性：</p>
+<ul>
+<li>
+<p>設定 <strong>baseColor</strong> 為藍色（在顏色選擇器中選擇藍色）。</p>
+</li>
+<li>
+<p><strong>metalness</strong> 設為 0，這會讓牆壁顯得更為光滑和不金屬化。</p>
+</li>
+<li>
+<p><strong>roughness</strong> 設為 0.5，這會讓牆壁的質感略為粗糙。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>這樣牆壁將會被設置為藍色，並且具有金屬化和粗糙度效果。</p>
+<p><br/>4. <strong>為球體添加現有外觀 (Add an Existing Appearance to the Ball)</strong></p>
+<p>Webots 提供了一些預定義的 <code inline="">PBRAppearance</code> 外觀，可以直接將其應用到物體上。</p>
+<ol>
+<li>
+<p>找到場景中的球體節點（通常為 <strong>Shape</strong> 節點下的 <strong>Sphere</strong>）。</p>
+</li>
+<li>
+<p>在 <strong>Appearance</strong> 字段中，右鍵點擊並選擇 <strong>Delete</strong> 來刪除當前的外觀。</p>
+</li>
+<li>
+<p>再次點擊 <strong>Appearance</strong> 字段，選擇 <strong>PROTO nodes</strong>，然後選擇 <strong>OldSteel</strong> 或其他預設的外觀。</p>
+</li>
+<li>
+<p>這樣，球體的外觀將會改變，並且應用你選擇的材質。</p>
+</li>
+</ol>
+<p><br/>5. <strong>從磁碟上添加紋理 (Add a Texture from Disk)</strong></p>
+<p>為物體添加紋理可以幫助增加真實感，尤其是對於旋轉物體，紋理會更顯得生動。</p>
+<ol>
+<li>
+<p>下載你想要的紋理（例如 <code inline="">red_brick_wall.jpg</code>）。</p>
+</li>
+<li>
+<p>在 Webots 中，選擇場景中的物體（例如，球體）。</p>
+</li>
+<li>
+<p>在 <strong>Appearance</strong> 節點下，刪除當前的外觀。</p>
+</li>
+<li>
+<p>添加 <strong>PBRAppearance</strong> 節點。</p>
+</li>
+<li>
+<p>在 <strong>PBRAppearance</strong> 節點下，選擇 <strong>ImageTexture</strong> 節點，並將其拖放到 <strong>baseColorMap</strong> 欄位。</p>
+</li>
+<li>
+<p>在 <strong>ImageTexture</strong> 的 <strong>url</strong> 字段中，使用 <strong>Add</strong> 按鈕來添加紋理的路徑，選擇剛剛下載的圖像文件。</p>
+</li>
+<li>
+<p>確保圖片的 URL 是正確的，可以是相對路徑指向項目目錄中的 <code inline="">worlds</code> 目錄。</p>
+</li>
+</ol>
+<p>當這些設置完成後，球體將顯示出你所選擇的紋理。</p>
+<p><br/>6. <strong>設置渲染選項 (Rendering Options)</strong></p>
+<p>Webots 提供了不同的渲染模式來查看模擬效果。</p>
+<ol>
+<li>
+<p>在 Webots 界面中，選擇 <strong>View</strong> 菜單。</p>
+</li>
+<li>
+<p>可以選擇不同的渲染模式：</p>
+<ul>
+<li>
+<p><strong>Wireframe Rendering</strong>：以線框顯示模型，只顯示物體的輪廓。</p>
+</li>
+<li>
+<p><strong>Plain Rendering</strong>：恢復常規渲染模式，顯示物體的完整外觀。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>還可以啟用其他視覺效果，如：</p>
+<ul>
+<li>
+<p>顯示坐標系統：<strong>View / Optional Rendering / Show Coordinates System</strong>。</p>
+</li>
+<li>
+<p>顯示距離傳感器光線：<strong>View / Optional Rendering / Show DistanceSensor Rays</strong>。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>這些渲染模式可以幫助你更好地理解場景中的物體如何互動。</p>
+<p><br/>7. <strong>保存和查看結果</strong></p>
+<p>完成所有設置後，保存你的世界檔案。你可以通過 <strong>File / Save World</strong> 來保存，並使用 <strong>View</strong> 菜單中的渲染模式來查看最終結果。</p>
+<br />問題四 << <a href='問題四.html'>Previous</a> <a href='問題六.html'>Next</a> >> 問題六</div>
         
     <!-- footer -->
       <div class="container">

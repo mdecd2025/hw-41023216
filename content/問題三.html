@@ -1,0 +1,280 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cd_hw</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cd2025 協同產品設計實驗41023216網站</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cd2025 協同產品設計實驗41023216網站</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li class='has-children'><a href='task1.html'>task1</a><ul class='dropdown'><li><a href='list.html'>list</a></li></ul><li class='has-children'><a href='task2.html'>task2</a><ul class='dropdown'><li><a href='ipv6.html'>ipv6</a><li><a href='W3.html'>W3</a></li></ul><li><a href='task3.html'>task3</a><li><a href='task4.html'>task4</a><li class='has-children'><a href='task5.html'>task5</a><ul class='dropdown'><li><a href='問題一.html'>問題一</a><li><a href='問題二.html'>問題二</a><li><a href='問題三.html'>問題三</a><li><a href='問題四.html'>問題四</a><li><a href='問題五.html'>問題五</a><li><a href='問題六.html'>問題六</a></li></ul><li><a href='task6.html'>task6</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW1.html'>HW1</a><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a></li></ul><li><a href='Midterm.html'>Midterm</a><li class='has-children'><a href='Exam.html'>Exam</a><ul class='dropdown'><li><a href='Exam1.html'>Exam1</a><li><a href='Exam2.html'>Exam2</a><li><a href='Exam3.html'>Exam3</a></li></ul><li><a href='Final.html'>Final</a><li><a href='Brython.html'>Brython</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">問題二 << <a href='問題二.html'>Previous</a> <a href='問題四.html'>Next</a> >> 問題四<br /><h1>問題三</h1>
+<h4 class="anchor-header" id="tutorial3appearance20minutes" name="tutorial-3-appearance-20-minutes">Tutorial 3: Appearance (20 Minutes)</h4>
+<p>The aim of this tutorial is to familiarize yourself with some nodes related to the graphical rendering. Good looking simulations can be created very quickly when these nodes are used adequately. A good graphics quality does not only enhance the user's experience, it is also essential for simulations where robots perceive their environment (camera image processing, line following, etc.).</p>
+<p>The result at the end of this tutorial is shown in<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#simulation-after-having-setup-the-light-and-the-pbrappearance-nodes">this figure</a>.</p>
+<h4 id="indexTitle">Index</h4>
+<ul id="index">
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#new-simulation">New Simulation</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#lights">Lights</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#modify-the-appearance-of-the-walls">Modify the Appearance of the Walls</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#add-an-existing-appearance-to-the-ball">Add an Existing Appearance to the Ball</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#add-a-texture-from-disk">Add a Texture from Disk</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#rendering-options">Rendering Options</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#solution-world-file">Solution: World File</a></li>
+<li><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#conclusion">Conclusion</a></li>
+</ul>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#new-simulation"><span class="anchor-link-image"></span></a>New Simulation</p>
+<blockquote>
+<p><strong>Hands-on #1</strong>: From the results of the previous tutorial, create a new simulation called "appearance.wbt" by using the<span> </span><code>File / Save World As...</code><span> </span>menu.</p>
+</blockquote>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#lights"><span class="anchor-link-image"></span></a>Lights</p>
+<p>The lighting of a world is determined by<span> </span><a href="https://cyberbotics.com/doc/reference/light">Light</a><span> </span>nodes and the<span> </span><a href="https://cyberbotics.com/doc/reference/background">Background</a><span> </span>. There are three types of light nodes: the<span> </span><a href="https://cyberbotics.com/doc/reference/directionallight">DirectionalLight</a>, the<span> </span><a href="https://cyberbotics.com/doc/reference/pointlight">PointLight</a><span> </span>and the<span> </span><a href="https://cyberbotics.com/doc/reference/spotlight">SpotLight</a>. A<span> </span><a href="https://cyberbotics.com/doc/reference/directionallight">DirectionalLight</a><span> </span>simulates a light which is infinitely far (ex: the sun), a<span> </span><a href="https://cyberbotics.com/doc/reference/pointlight">PointLight</a><span> </span>simulates light emitted from a single point (ex: a light bulb), and a<span> </span><a href="https://cyberbotics.com/doc/reference/spotlight">SpotLight</a><span> </span>simulates a conical light (ex: a flashlight).<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#comparison-of-the-three-lighting-possible-in-webots-left-directionallight-middle-spotlight-and-right-pointlight">This figure</a><span> </span>shows a comparison between them. Each type of light node can cast shadows. You can find their complete documentation in the<span> </span><a href="https://cyberbotics.com/doc/reference/nodes-and-api-functions">Reference Manual</a>.</p>
+<figure name="comparison-of-the-three-lighting-possible-in-webots-left-directionallight-middle-spotlight-and-right-pointlight"><img alt="tutorial_light_comparison.png" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/tutorial_light_comparison.thumbnail.jpg"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#comparison-of-the-three-lighting-possible-in-webots-left-directionallight-middle-spotlight-and-right-pointlight"><span class="anchor-link-image"></span></a>Comparison of the three lighting possible in Webots. Left DirectionalLight, middle SpotLight and right PointLight.</figcaption>
+</figure>
+<p>Lights are costly in term of performance and reduce the simulation speed (especially when they cast shadows). Minimizing the number of lights increases the rendering speed. A<span> </span><a href="https://cyberbotics.com/doc/reference/pointlight">PointLight</a><span> </span>is more efficient than a<span> </span><a href="https://cyberbotics.com/doc/reference/spotlight">SpotLight</a>, but less than a<span> </span><a href="https://cyberbotics.com/doc/reference/directionallight">DirectionalLight</a>.</p>
+<p>In this simulation, the<span> </span><a href="https://cyberbotics.com/doc/reference/light">Light</a><span> </span>node is not visible in the scene tree because it is contained in the<span> </span><a href="https://webots.cloud/run?url=https://github.com/cyberbotics/webots/blob/released/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto" target="_blank">TexturedBackgroundLight</a><span> </span>PROTO node. It consists of a<span> </span><a href="https://cyberbotics.com/doc/reference/directionallight">DirectionalLight</a><span> </span>whose intensity and direction is computed automatically according to the background of the scene.</p>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#modify-the-appearance-of-the-walls"><span class="anchor-link-image"></span></a>Modify the Appearance of the Walls</p>
+<p>The aim of this subsection is to color the walls in blue.</p>
+<p>The<span> </span><a href="https://cyberbotics.com/doc/reference/appearance">Appearance</a><span> </span>and<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a><span> </span>nodes of the<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>node determine the graphical appearance of the object. Among other things, these nodes are responsible for the color and texture of objects.</p>
+<p>Prefer<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearances</a><span> </span>for a better rendering as shown in the following comparison.</p>
+<figure name="comparison-between-appearance-node-left-and-pbrappearance-node-right"><img alt="tutorial_appearance_comparison.png" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/tutorial_appearance_comparison.thumbnail.jpg"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#comparison-between-appearance-node-left-and-pbrappearance-node-right"><span class="anchor-link-image"></span></a>Comparison between Appearance node (left) and PBRAppearance node (right).</figcaption>
+</figure>
+<blockquote>
+<p><strong>Hands-on #2</strong>: In the<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>node representing graphically the first wall, add a<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a><span> </span>node to the<span> </span><code>appearance</code><span> </span>field.</p>
+<ol>
+<li>Set its<span> </span><code>baseColor</code><span> </span>field to blue using the color selector.</li>
+<li>Set its<span> </span><code>metalness</code><span> </span>field to 0 using the field editor.</li>
+<li>Finally, set its<span> </span><code>roughness</code><span> </span>field to 0.5 using the field editor.</li>
+<li>If the DEF-USE mechanism of the previous tutorial has been correctly implemented, all the walls should turn blue.</li>
+</ol>
+</blockquote>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#add-an-existing-appearance-to-the-ball"><span class="anchor-link-image"></span></a>Add an Existing Appearance to the Ball</p>
+<p>A number of pre-defined<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a><span> </span>are provided in the Webots release.</p>
+<blockquote>
+<p><strong>Hands-on #3</strong>: Add a pre-defined<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a></p>
+<ol>
+<li>Select the<span> </span><code>appearance</code><span> </span>field and remove the previously added node. To do this, either press the "delete" button on your keyboard or right-click on the field and select "delete" from the menu. The field should now say "appearance NULL" instead of "appearance PBRAppearance".</li>
+<li>Double-click on the field again, then navigate to<span> </span><code>PROTO nodes (Webots Projects)</code>, then<span> </span><code>appearances</code><span> </span>and select<span> </span><code>OldSteel (PBRAppearance)</code>.</li>
+</ol>
+</blockquote>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#add-a-texture-from-disk"><span class="anchor-link-image"></span></a>Add a Texture from Disk</p>
+<p>The aim of this subsection is to apply a locally available texture to the ball. A texture on a rolling object can help to appreciate its movement.</p>
+<blockquote>
+<p>Hands-on #4: add a locally available texture to the ball.</p>
+<ol>
+<li>Download the texture available<span> </span><a href="https://raw.githubusercontent.com/cyberbotics/webots/released/projects/default/worlds/textures/red_brick_wall.jpg" target="_blank">here</a><span> </span>and save it to your disk.</li>
+<li>Remove the previously added node from the<span> </span><code>appearance</code><span> </span>field and add a<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a><span> </span>node instead.</li>
+<li>Add an<span> </span><a href="https://cyberbotics.com/doc/reference/imagetexture">ImageTexture</a><span> </span>node to the<span> </span><code>baseColorMap</code><span> </span>field of the<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a><span> </span>node.</li>
+<li>Add an item to the<span> </span><a href="https://cyberbotics.com/doc/reference/imagetexture">ImageTexture</a>'s<span> </span><code>url</code><span> </span>field using the<span> </span><code>Add</code><span> </span>button.</li>
+<li>Then set the value of the newly added<span> </span><code>url</code><span> </span>item using the "Select" button.</li>
+<li>Follow the path to the location where you saved the texture and select it.</li>
+</ol>
+</blockquote>
+<p>The texture URLs must be defined either relative to the<span> </span><code>worlds</code><span> </span>directory of your project directory or relative to the default project directory<span> </span><a href="https://github.com/cyberbotics/webots/tree/released/projects/default/worlds" target="_blank"><code>WEBOTS_HOME/projects/default/worlds</code></a>.</p>
+<p>Open the<span> </span><code>red_brick_wall.jpg</code><span> </span>texture in an image viewer while you observe how it is mapped onto the<span> </span><a href="https://cyberbotics.com/doc/reference/sphere">Sphere</a><span> </span>node in Webots.</p>
+<p>Textures are mapped onto Geometry nodes according to predefined<span> </span><strong>UV mapping</strong><span> </span>functions described in the<span> </span><a href="https://cyberbotics.com/doc/reference/imagetexture">Reference Manual</a>. A UV mapping function maps a 2D image representation to a 3D model.</p>
+<figure name="simulation-after-having-setup-the-light-and-the-pbrappearance-nodes"><img alt="tutorial_appearance.png" src="https://raw.githubusercontent.com/cyberbotics/webots/released/docs/guide/images/tutorial_appearance.thumbnail.jpg"/>
+<figcaption class="anchor-header"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#simulation-after-having-setup-the-light-and-the-pbrappearance-nodes"><span class="anchor-link-image"></span></a>Simulation after having setup the Light and the `PBRAppearance` nodes.</figcaption>
+</figure>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#rendering-options"><span class="anchor-link-image"></span></a>Rendering Options</p>
+<p>Webots offers several rendering modes available in the<span> </span><code>View</code><span> </span>menu.</p>
+<blockquote>
+<p><strong>Hands-on #5</strong>: View the simulation in wireframe mode by using the<span> </span><code>View / Wireframe Rendering</code><span> </span>menu item. Then restore the plain rendering mode:<span> </span><code>View / Plain Rendering</code>.</p>
+</blockquote>
+<p>Others rendering features can be helpful:</p>
+<ul>
+<li>View Coordinates systems:<span> </span><code>View / Optional Rendering / Show Coordinates System</code><span> </span><kbd>ctrl</kbd>-<kbd>F1</kbd></li>
+<li>View distance sensor rays:<span> </span><code>View / Optional Rendering / Show DistanceSensor Rays</code><span> </span><kbd>ctrl</kbd>-<kbd>F10</kbd></li>
+</ul>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#solution-world-file"><span class="anchor-link-image"></span></a>Solution: World File</p>
+<p>To compare your world with the solution, go to your files and find the folder named "my_first_simulation" created in<span> </span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">Tutorial 1</a>, then go to the "worlds" folder and open with a text editor the right world.<span> </span><a href="https://github.com/cyberbotics/webots/tree/released/projects/samples/tutorials/worlds/appearance.wbt" target="_blank">This solution</a><span> </span>as the others is located in the<span> </span><a href="https://github.com/cyberbotics/webots/tree/released/projects/samples/tutorials/worlds/" target="_blank">solution directory</a>.</p>
+<p><br/><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance#conclusion"><span class="anchor-link-image"></span></a>Conclusion</p>
+<p>In this tutorial, you have learned how to set up a good looking environment using the<span> </span><a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a><span> </span>node and the light nodes.</p>
+<p>You can go further on this topic by reading the detailed description of these nodes in the<span> </span><code>Reference Manual</code>. This<span> </span><a href="https://github.com/cyberbotics/webots/discussions/5411" target="_blank">FAQ</a><span> </span>will give you a method to efficiently setup these nodes.</p>
+<br />問題二 << <a href='問題二.html'>Previous</a> <a href='問題四.html'>Next</a> >> 問題四</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
