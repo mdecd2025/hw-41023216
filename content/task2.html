@@ -144,7 +144,9 @@ img.add_border {
         </header>
     <div id="tipue_search_content">list << <a href='list.html'>Previous</a> <a href='ipv6.html'>Next</a> >> ipv6<br /><h1>task2</h1>
 <h4>使用 SSH 協定執行作業倉儲的推送</h4>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="360" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/S-PhyOpH-fo" title="ssh" width="640"></iframe></p>
 <p><a href="https://zh.wikipedia.org/zh-tw/Secure_Shell">SSH</a><span> </span>是一種加密的網路傳輸協定, PuTTY 則是可用於 Windows 環境的 SSH 協定工具, 其中支援遠端登入 (putty.exe) 與檔案傳輸工具 (psftp.exe).</p>
+<p></p>
 <p>使用 PuTTY 所建立的公私鑰進行 Github push 認證的步驟:</p>
 <p>第一步:</p>
 <p>若希望在 Windows 環境透過 git 指令, 使用 PuTTY 設定的 session (一個代表連線伺服器主機、私鑰位置與是否使用代理主機等資訊的字串), 執行 push, 必須要在啟動可攜環境時, 設定 GIT_SSH 環境變數, 將此變數指向 PuTTY 套件中的 plink.exe 位置 (也就是 set GIT_SSH=%Disk%:\putty\plink.exe).</p>
@@ -193,8 +195,7 @@ img.add_border {
 </div>
 </div>
 <p>其中的 [remote "origin"] 表示當使用 git 指令中針對此倉儲 "origin" 是一個與遠端倉儲對應的字串代號, 代表其下兩項設定. url 代表此 "origin" 的倉儲連線網址, 而連線至此倉儲的協定是採遠端登入 (使用 Github 支援的 SSH 遠端登入協定), 且此遠端登入的帳號為 "git", 這是所有要使用 SSH 執行 git push 的用戶共同使用的登入帳號.</p>
-<p>url 設定中 "@" 之後的 "41023216" 就是宣告要使用此電腦登錄檔中所設定的 session 名稱 (代表要連線到 github.com, 且帶的 myprivatekey.ppk, 準備在登入流程中與 github.com 中 mdewcm2025 帳號下的 hw-scrum-1 倉儲擁有者 (或帶有 repo 管理權限的帳號) 所登錄的 public keys 進行認證比對, 一旦通過認證, git push 指令就可以成功將改版資料推送到指定的倉儲區域.</p>
-<br />list << <a href='list.html'>Previous</a> <a href='ipv6.html'>Next</a> >> ipv6</div>
+<p>url 設定中 "@" 之後的 "41023216" 就是宣告要使用此電腦登錄檔中所設定的 session 名稱 (代表要連線到 github.com, 且帶的 myprivatekey.ppk, 準備在登入流程中與 github.com 中 mdewcm2025 帳號下的 hw-scrum-1 倉儲擁有者 (或帶有 repo 管理權限的帳號) 所登錄的 public keys 進行認證比對, 一旦通過認證, git push 指令就可以成功將改版資料推送到指定的倉儲區域.</p><br />list << <a href='list.html'>Previous</a> <a href='ipv6.html'>Next</a> >> ipv6</div>
         
     <!-- footer -->
       <div class="container">
