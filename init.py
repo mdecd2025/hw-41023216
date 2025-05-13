@@ -7,15 +7,17 @@ import os
 _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
 # config directory
 config_dir = _curdir + "/config/"
+
 class Init(object):
     # uwsgi as static class variable, can be accessed by Init.uwsgi
     uwsgi = False
     site_title = "cd_hw"
     ip = "127.0.0.1"
-   #ip = "120.113.99.12"
-   # ip = "2001:288:6004:17:fff1:cd25:0000:b008"
+    # ip = "120.113.99.12"
+    #ip = "2001:288:6004:17:fff1:cd25:0000:b008"
     dynamic_port = 9443
     static_port = 8443
+
     def __init__(self):
         # hope to create downloads and images directories　
         if not os.path.isdir(_curdir + "/downloads"):
