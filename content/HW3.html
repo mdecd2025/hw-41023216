@@ -147,6 +147,18 @@ img.add_border {
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
 <p><a href="./../downloads/hw3.rar">hw3</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_hQx6rWENAc" title="國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 41023216" width="1265"></iframe></p>
+<p></p>
+<p>把畫好的圖丟到程式中進行轉檔<br/>並到blender分別對他們進行顏色上的跟換<br/>再新增robot<br/>建立兩個solid 兩個hingejoint<br/>分別命名為 base joint1 joint4 stand<br/>在base中children新增cadshape丟入base檔案<br/>bounding選擇mesh丟入其對應檔案<br/>在joint1接頭參數設定 軸 0，0，1 錨點-0.3，0.22，0<br/>在device設定馬達命名為motor1<br/>最大加速度為1e+05 最大扭力1e+05<br/>新增solid命名為press<br/>在press中children新增cadshape丟入press檔案<br/>在其下面新增hingejoint命名為joint2</p>
+<p>在joint2接頭參數設定 軸 0，0，1 錨點-0.0224，0.148，0<br/>新增solid命名為connector<br/>在connector中children新增cadshape丟入connector檔案<br/>在其下面新增hingejoint命名為joint3</p>
+<p>在joint3接頭參數設定 軸 0，0，1 錨點-0.0686，0.707，0<br/>新增solid命名為shooter<br/>在shooter中children新增cadshape丟入shooter檔案</p>
+<p>在joint4接頭參數設定 軸 0，0，1 錨點0.15，0.68，0<br/>在joint4用solidreference 用shooter</p>
+<p>在joint(1、2、3)bounding選擇mesh丟入其對應檔案以及打開physics</p>
+<p>在stand接頭參數設定 旋轉0，0，1，-1.57<br/>在contactmaterial命名metal<br/>在stand中children新增pose<br/>其軸 -1.13，2.8，-0.3 旋轉0，1，0，-1.57<br/>在pose中children新增cadshape丟入basket_stand檔案basket_stand<br/>bounding選擇pose 軸 -1.13，2.8，-0.3 旋轉0，1，0，-1.57<br/>在bounding中children新增mesh丟入其對應檔案</p>
+<p>在pose下面新增distance sensor命名為sensor<br/>其軸 -1.13，2.8，-0.3 旋轉0，1，0，-1.57<br/>在其裡面的children新增solid命名為sensor<br/>旋轉1，0，0，0<br/>新增solid命名為ball<br/>更改其顏色 在geomotry新增cylinder 設定高0.4半徑0.02</p>
+<p>新增solid命名為ball<br/>在contactmaterial命名ball<br/>更改其顏色 在geomotry新增sphere 設定半徑0.1<br/>開啟bounding 以及physics</p>
+<p>新增solid命名為floor<br/>其軸 0，-0.1，0 旋轉1，0，0，-1.57<br/>在contactmaterial命名metal<br/>在base中children新增cadshape丟入floor檔案<br/>bounding選擇mesh丟入其對應檔案</p>
+<p>在controller選擇程式 sensor</p>
+<p></p>
 <p>在做這次的投籃機，跟之前的相比，有比較大的難度，在看過老師的範例，跟著老師做出的步驟一步一步地完成，這次也沒有遇到像上次的問題，一直做不出來。</p><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
         
     <!-- footer -->
