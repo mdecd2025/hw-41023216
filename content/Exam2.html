@@ -147,7 +147,43 @@ img.add_border {
 <p><span>國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 41023216</span></p>
 <p><a href="./../downloads/exam2.rar">exam2</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="351" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/GML9QcZzuE8" title="國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 41023216" width="718"></iframe>在畫好的四連桿使用老師的給程式把它轉成obj檔<br/>建立robot<br/>新增兩個solid 兩個hingejoint<br/>命名為base1 base2 joint1 joint4<br/>再分別使用cadshape把檔案丟到裡面<br/>在base1 base2 中bounding使用mesh選擇對應的obj檔<br/>在joint1中的cadshape下面新增joint2 則joint3同理<br/>也分別在cadshape丟入對應的檔案<br/>joint1、2、3分別開啟bounding 以及physics<br/>在joint1中的device新增馬達joint_motor1<br/>在joint4用solidreference 用link3</p>
-<p>這次測驗，在我已經有做過hw2的前提下，自己完成的比之前還要快，希望自己可以越來越順手，不要再因為一些細節，造成自己時間上的浪費。</p><br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
+<p>這次測驗，在我已經有做過hw2的前提下，自己完成的比之前還要快，希望自己可以越來越順手，不要再因為一些細節，造成自己時間上的浪費。</p>
+<p></p>
+<p><strong>Exam2 相關提問:</strong></p>
+<p><strong>1. WorldInfo 節點的作用為何？</strong><br/>定義場景全局環境參數，如重力大小與方向、時間步長，影響整體模擬行為。</p>
+<p><strong>2. Viewpoint 節點設計時需考慮哪些參數？</strong><br/>主要有 position（觀察點位置）、orientation（觀察方向）、fieldOfView（視野角度）、near/far（裁剪平面距離），決定觀察視角與範圍。</p>
+<p><strong>3. TexturedBackground 與 TexturedBackgroundLight 在場景中的功能？</strong><br/>TexturedBackground：負責背景貼圖，增強視覺真實感。</p>
+<p>TexturedBackgroundLight：控制背景光影，使光線效果更自然。</p>
+<p><strong>4. 為什麼需要使用 EXTERNPROTO 來引用背景相關的 PROTO？</strong><br/>可重用外部定義的複雜背景模型，減少場景檔案大小與重複編寫。</p>
+<p><strong>5. 場景中為何有兩個 BASE（BASE 與 BASE2）？</strong><br/>代表不同基座或參考點，用於多層結構定位。</p>
+<p><strong>6. CadShape 節點如何使用，其作用與限制為何？</strong><br/>導入外部 CAD 模型（如 obj 檔），增加細節真實度；限制為計算負擔大、碰撞設定複雜。</p>
+<p><strong>7. Mesh 作為 boundingObject 有什麼效果？</strong><br/>提供精確碰撞範圍，但較耗效能。</p>
+<p><strong>8. 資料夾路徑 "../split_parts/" 的用途為何？</strong><br/>存放拆分後的零件檔案，方便模組化管理。</p>
+<p><strong>9. Robot 節點的結構和功能？</strong><br/>機器人根節點，包含連桿、關節、感測器、控制器等。</p>
+<p><strong>10. HingeJoint 節點在本結構中如何應用？</strong><br/>定義旋轉關節，限制連桿旋轉軸與角度範圍。</p>
+<p><strong>11. HingeJointParameters 的 axis 與 anchor 參數說明？</strong><br/>axis：旋轉軸方向。</p>
+<p>anchor：旋轉中心位置。</p>
+<p><strong>12. RotationalMotor 的功能是什麼，如何與關節對應？</strong><br/>驅動關節旋轉，控制轉速與力矩。</p>
+<p><strong>13. SolidReference 的用途與設計意義？</strong><br/>重複使用已定義 Solid，避免重複定義，提升維護性。</p>
+<p><strong>14. 為什麼每個連桿（link）都需要 physics 與 boundingObject？</strong><br/>physics 使其能參與物理模擬，boundingObject 定義碰撞區域。</p>
+<p><strong>15. name 屬性在 Solid 與 Robot 節點中的差異？</strong><br/>Solid：零件名稱。</p>
+<p>Robot：整體機器人名稱。</p>
+<p><strong>16. JOINT1~JOINT4 分別對應機構的哪個部位？</strong><br/>視機構設計而定，對應各旋轉關節。</p>
+<p><strong>17. anchor 參數對機構運動的實際影響？</strong><br/>決定關節旋轉中心，影響連桿運動軌跡。</p>
+<p><strong>18. DEF 與 USE 的差異與用途？</strong><br/>DEF：定義節點名稱。</p>
+<p>USE：重複引用該節點。</p>
+<p><strong>19. 場景中 LINK1、LINK2、LINK3 的結構意義？</strong><br/>代表機械手臂或機構不同層級的連桿。</p>
+<p><strong>20. 為何要將外部 CAD 檔案（obj）導入 Webots？</strong><br/>提升模型細節與真實感。</p>
+<p><strong>21. 如何在 Webots 中檢查導入 CAD 物件的碰撞情形？</strong><br/>利用 boundingObject 與 physics 參數，並模擬觀察碰撞反應。</p>
+<p><strong>22. controller 屬性如何讓機器人執行指定程式？</strong><br/>設定 Robot 節點 controller 屬性，指定外部控制程式。</p>
+<p><strong>23. 如果要更改關節旋轉範圍，該修改哪些參數？</strong><br/>修改 HingeJointParameters 中的 minStop 和 maxStop。</p>
+<p>24. 如何確保多個 link 結構組裝時不產生重疊？<br/>正確設定 anchor 與位置，並用碰撞檢測輔助。</p>
+<p><strong>25. 若要讓 LINK3 可由 JOINT3 控制，需注意哪些設定？</strong><br/>確保 LINK3 是 JOINT3 的 childSolid，且軸向與 anchor 設定正確。</p>
+<p>26. 機構結構層級在 VRML/WBT 檔案中的重要性？<br/>影響運動傳遞及相對位置，結構正確才能模擬真實機械。</p>
+<p><strong>27. 若 CAD 檔案位置錯誤或缺失，Webots 會怎麼處理？</strong><br/>會報錯並無法載入該零件。</p>
+<p><strong>28. 如何於場景內為各零件添加材質或調整外觀？</strong><br/>透過 Shape 與 Appearance 節點設定。</p>
+<p><strong>29. Viewpoint 的 orientation 和 position 如何影響觀察？</strong><br/>position 決定攝影機位置，orientation 決定攝影機朝向。</p>
+<p><strong>30. 製作此一場景時，需注意哪些命名與結構規範？</strong><br/>命名須唯一且具意義，結構層級清晰，關節配置合理。</p><br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
         
     <!-- footer -->
       <div class="container">

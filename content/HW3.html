@@ -159,7 +159,49 @@ img.add_border {
 <p>新增solid命名為floor<br/>其軸 0，-0.1，0 旋轉1，0，0，-1.57<br/>在contactmaterial命名metal<br/>在base中children新增cadshape丟入floor檔案<br/>bounding選擇mesh丟入其對應檔案</p>
 <p>在controller選擇程式 sensor</p>
 <p></p>
-<p>在做這次的投籃機，跟之前的相比，有比較大的難度，在看過老師的範例，跟著老師做出的步驟一步一步地完成，這次也沒有遇到像上次的問題，一直做不出來。</p><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
+<p>在做這次的投籃機，跟之前的相比，有比較大的難度，在看過老師的範例，跟著老師做出的步驟一步一步地完成，這次也沒有遇到像上次的問題，一直做不出來。</p>
+<p></p>
+<p><strong>Tutorial6 </strong><strong>相關提問</strong></p>
+<ol>
+<li><strong> Tutorial6 </strong><strong>的主要學習主題是什麼？</strong><br/> 學習如何使用攝影機感測器並透過影像資料控制機器人行為。</li>
+<li><strong> </strong><strong>在<span> Tutorial6 </span>中，<span>e-puck </span>機器人新增了哪些裝置？</strong><br/> 新增了攝影機（<span>Camera</span>）裝置。</li>
+<li><strong> </strong><strong>如何在<span> Webots </span>中使用攝影機（<span>Camera</span>）？</strong><br/> 將<span> Camera </span>裝置加入機器人並在程式中初始化與啟用。</li>
+<li><strong> Camera </strong><strong>需要在程式中如何啟用？</strong><br/> 使用<span> camera.enable(timestep) </span>指令開啟攝影機功能。</li>
+<li><strong> </strong><strong>如何取得攝影機擷取到的影像資料？</strong><br/> 使用<span> camera.getImage() </span>取得目前影像，搭配影像處理工具進行分析。</li>
+<li><strong> Tutorial6 </strong><strong>中，機器人如何依據攝影機影像做出反應？</strong><br/> 分析畫面中顏色或物體位置來改變前進方向或執行特定動作。</li>
+<li><strong> Camera </strong><strong>裝置可以調整哪些參數？</strong><br/> 可調整影像解析度、視角、色彩格式等。</li>
+<li><strong> </strong><strong>影像解析度的設定會對模擬有什麼影響？</strong><br/> 解析度越高，處理負載越大，模擬速度會變慢但影像更清晰。</li>
+<li><strong> </strong><strong>如何將攝影機影像儲存成圖片檔？</strong><br/> 使用<span> Webots </span>提供的<span> image saving API</span>，如<span> camera.saveImage()</span>。</li>
+<li><strong> </strong><strong>若攝影機影像顯示異常，可能的原因有哪些？</strong><br/> 可能未啟用攝影機、解析度錯誤、影像讀取格式錯誤或無視野畫面。</li>
+</ol>
+<p><strong>Tutorial7 </strong><strong>相關提問</strong></p>
+<ol>
+<li><strong> Tutorial7 </strong><strong>的核心任務是什麼？</strong><br/> 學習使用攝影機辨識顏色並控制機器人追蹤指定顏色物體。</li>
+<li><strong> </strong><strong>在本範例中<span> e-puck </span>機器人如何偵測顏色？</strong><br/> 從攝影機擷取畫面，分析像素的顏色值來判斷目標。</li>
+<li><strong> </strong><strong>如何分析攝影機擷取的影像來辨識特定顏色？</strong><br/> 將影像轉換為像素陣列，分析特定顏色範圍內的像素比例與位置。</li>
+<li><strong> OpenCV </strong><strong>或其他影像處理函式庫在<span> Webots </span>控制器程式中的應用方式？</strong><br/> 在控制器中導入<span> OpenCV </span>函式庫，用來進行色彩篩選、形狀辨識或區域追蹤。</li>
+<li><strong> </strong><strong>如何將影像中的顏色資訊轉換為機器人行為？</strong><br/> 根據顏色位置控制機器人方向，例如顏色在左側則左轉，中央則前進。</li>
+<li><strong> </strong><strong>若要辨識多種顏色，程式需考慮哪些步驟？</strong><br/> 定義每種顏色的<span> HSV </span>或<span> RGB </span>範圍，分別比對後制定對應反應。</li>
+<li><strong> </strong><strong>如何解決不同光源下顏色偵測的不穩定問題？</strong><br/> 可進行影像白平衡處理、轉換至<span> HSV </span>色彩空間、或加入動態校正邏輯。</li>
+<li><strong> e-puck </strong><strong>機器人如何追蹤影像中的顏色物件？</strong><br/> 偵測顏色物件在畫面中的位置，控制左右輪速度使其對準目標。</li>
+<li><strong> </strong><strong>若影像中有多個同色物件，程式如何選擇追蹤目標？</strong><br/> 可選擇最大面積、最近距離或最中央的物件作為追蹤目標。</li>
+<li><strong> Tutorial7 </strong><strong>能否應用於現實世界的機器人？需做哪些調整？</strong><br/> 可應用，但需考慮真實攝影機雜訊、光線變化與處理效能等問題。</li>
+</ol>
+<p><strong>Tutorial8 </strong><strong>相關提問</strong></p>
+<ol>
+<li><strong> Tutorial8 </strong><strong>的主要學習目標是什麼？</strong><br/> 學習如何使用<span> Supervisor </span>控制整個模擬環境與監控機器人狀態。</li>
+<li><strong> </strong><strong>什麼是<span> Supervisor</span>？在<span> Tutorial8 </span>扮演什麼角色？</strong><br/> Supervisor 是一個特殊控制器，用來操控整個模擬環境與監控所有物件。</li>
+<li><strong> Supervisor </strong><strong>可以進行哪些操作？</strong><br/> 可讀取與修改機器人位置、重設模擬、建立記錄、控制場景物件等。</li>
+<li><strong> </strong><strong>如何在<span> Supervisor </span>控制器中存取並控制其他機器人？</strong><br/> 使用<span> supervisor.getFromDef() </span>取得機器人節點，再用<span> getField() </span>控制其屬性。</li>
+<li><strong> </strong><strong>如何用<span> Supervisor </span>監測機器人是否達到目標區域？</strong><br/> 透過讀取機器人座標與目標位置比對是否進入指定範圍。</li>
+<li><strong> Supervisor </strong><strong>如何重設模擬或重置機器人位置？</strong><br/> 使用<span> reset() </span>或設定<span> translation</span>、<span>rotation </span>欄位回復初始狀態。</li>
+<li><strong> Supervisor </strong><strong>能否獲取所有物件的座標與狀態？如何實作？</strong><br/> 可以，透過迴圈抓取所有節點的<span> translation </span>與其他欄位資訊。</li>
+<li><strong> </strong><strong>如何紀錄機器人模擬過程的數據供日後分析？</strong><br/> 使用<span> Supervisor </span>寫入資料至檔案，如<span> CSV</span>，記錄時間、位置與狀態資訊。</li>
+<li><strong> Supervisor </strong><strong>可以如何協助自動化測試機器人行為？</strong><br/> 可重複執行模擬、批次測試不同場景、記錄結果並自動分析。</li>
+<li><strong> </strong><strong>綜合<span> Tutorial6~8</span>，請說明感知（感測）、決策（控制器）、監督（<span>Supervisor</span>）三者如何協同運作。</strong><br/> 感測器收集環境資訊，控制器依據資料決策執行動作，<span>Supervisor </span>則負責監控全域狀態並控制模擬流程，三者互補構成完整的智慧機器人系統。</li>
+</ol>
+<p><span> </span></p>
+<br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
         
     <!-- footer -->
       <div class="container">

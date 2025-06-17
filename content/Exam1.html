@@ -148,7 +148,71 @@ img.add_border {
 <p><a href="./../downloads/exam1.rar">exam1</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="351" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pIkh02xkoeQ" title="國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam1 - 41023216" width="633"></iframe></p>
 <p>加入Robot<br/>新增solid hingjoint<br/>命名為base joint1 <br/>在base建立1,0.1,0.1的方塊<br/>在材質中的transparency設為1 使base變成透明<br/>joint1建立0.4,0.1,0.1的方塊<br/>joint1，調整axis(0,0,1),anchor(-0.5,0,0)<br/>調整位置(-0.5,0,0)與角度(0,0,1,0.0279)學號後兩碼為16<br/>新增馬達命名為 motor<br/>在joint1加入新的Hingejoint命名為joint2<br/>joint2建立0.6,0.1,0.1的方塊<br/>還要再建一個0.3,0.1,0.1的方塊<br/>調整位置(0.4,0,0.1)與角度(0,0,1,1.21)<br/>joint2，調整axis(0,0,1),anchor(0.4,0,0)<br/>在joint2加入新的Hingejoint命名為joint3<br/>joint3建立0.9,0.1,0.1的方塊<br/>調整位置(0.6,0,-0.1)與角度(0,0,-1,2.39)<br/>joint3，調整axis(0,0,1),anchor(0.6,0,0)<br/>在link3_shape加入新的Hingejoint命名為joint4<br/>新增SolidReference<br/>joint4調整axis(0,0,1),anchor(0.9,0,0)<br/>joint1、2、3分別開啟bounding 以及physics<br/>加入controller</p>
-<p>在這次的測驗中，沒有遇到太多的問題，因為大部分的問題都已經在作業1的時候，就已經解決了。</p><br />Exam << <a href='Exam.html'>Previous</a> <a href='Exam2.html'>Next</a> >> Exam2</div>
+<p>在這次的測驗中，沒有遇到太多的問題，因為大部分的問題都已經在作業1的時候，就已經解決了。</p>
+<p></p>
+<h4><span>Exam1 相關提問:</span></h4>
+<h4>1. 製作此場景時，WorldInfo 節點有何作用</h4>
+<p data-end="124" data-start="96">設定模擬的基本資訊，例如模擬時間步長、重力、背景顏色等。</p>
+<h4>2. Viewpoint 節點的主要功能是什麼</h4>
+<p data-end="175" data-start="156">定義使用者進入模擬時的視角與觀看方向。</p>
+<h4>3. TexturedBackground 與 TexturedBackgroundLight 在場景中負責什麼</h4>
+<p data-end="305" data-start="240"><span>TexturedBackground </span>設定天空與地面貼圖，<span>TexturedBackgroundLight </span>設定全域照明方向與顏色。</p>
+<h4 data-end="335" data-start="307">4. Robot 節點在此場景中代表什麼角色</h4>
+<p data-end="367" data-start="336">代表可控制的機器人主體，包含其組件、感測器、致動器與控制程式。</p>
+<h4 data-end="396" data-start="369">5. base Solid 節點的功能為何</h4>
+<p data-end="426" data-start="397">提供機構的固定基座，常為靜態且不可動的部分，支持其他結構。</p>
+<h4 data-end="468" data-start="428">6. Shape 與 Appearance 節點如何用於物件外觀設定</h4>
+<p data-end="515" data-start="469"><span>Shape </span>定義物件的幾何形狀，<span>Appearance </span>用於設定材質、顏色與透明度等視覺效果。</p>
+<h4 data-end="550" data-start="517">7. HingeJoint 節點的用途與基本參數有哪些</h4>
+<p data-end="608" data-start="551">建立單軸旋轉關節，常用參數有<span> axis </span>表示旋轉軸、<span>anchor </span>表示旋轉中心、<span>endPoint </span>表示連接的物件。</p>
+<h4 data-end="665" data-start="610">8. HingeJointParameters 節點中的 axis 與 anchor 分別代表什麼</h4>
+<p data-end="702" data-start="666"><span>axis </span>是旋轉軸方向向量，<span>anchor </span>是旋轉中心點在世界座標的位置。</p>
+<h4 data-end="748" data-start="704">9. RotationalMotor 裝置如何與 HingeJoint 結合</h4>
+<p data-end="796" data-start="749">作為<span> HingeJoint </span>的子裝置，透過<span> jointName </span>或階層位置自動控制該旋轉關節。</p>
+<h4 data-end="838" data-start="798">10. Solid 節點與 boundingObject 的關係為何</h4>
+<p data-end="887" data-start="839"><span>boundingObject </span>是<span> Solid </span>的碰撞邊界模型，模擬中物理計算與碰撞偵測依此進行。</p>
+<h4 data-end="925" data-start="889">11. link1 link2 link3 各自代表什麼結構</h4>
+<p data-end="958" data-start="926">它們分別是四連桿機構中的第一至第三個連桿，連接成完整的運動結構。</p>
+<h4 data-end="985" data-start="960">12. Pose 節點的功能與使用時機</h4>
+<p data-end="1016" data-start="986">用來在群組物件中施加局部平移與旋轉，適合精細調整子元件位置。</p>
+<h4 data-end="1049" data-start="1018">13. geometry Box 如何設定形狀尺寸</h4>
+<p data-end="1092" data-start="1050">使用<span> size </span>屬性設定為長寬高三個值，例如<span> size 0.1 0.02 0.02</span>。</p>
+<h4 data-end="1144" data-start="1094">14. material Material 內的 diffuseColor 如何影響外觀</h4>
+<p data-end="1161" data-start="1145">設定物體在光照下的基礎顯示顏色。</p>
+<h4 data-end="1197" data-start="1163">15. transparency 參數設定對外觀有何影響</h4>
+<p data-end="1221" data-start="1198">設定透明度，<span>0 </span>表示不透明，<span>1 </span>表示完全透明。</p>
+<h4 data-end="1263" data-start="1223">16. endPoint 屬性在 HingeJoint 結構中的意義</h4>
+<p data-end="1291" data-start="1264">指定旋轉關節所連接的下一個物件，作為旋轉作用的目標物。</p>
+<h4 data-end="1327" data-start="1293">17. Robot 節點中 children 陣列的作用</h4>
+<p data-end="1355" data-start="1328">列出機器人所有子元件，包括外殼、感測器、關節、馬達等。</p>
+<h4 data-end="1388" data-start="1357">18. physics Physics 節點的功能</h4>
+<p data-end="1421" data-start="1389">設定物件的質量、摩擦係數、彈性係數等參數，影響模擬時的動態反應。</p>
+<h4 data-end="1460" data-start="1423">19. SolidReference 如何實現多關節結構的連結</h4>
+<p data-end="1497" data-start="1461">可以重複使用已定義的<span> Solid </span>元件來連接各連桿，實現複雜的關節結構。</p>
+<h4 data-end="1533" data-start="1499">20. controller 屬性如何指定機器人控制程式</h4>
+<p data-end="1558" data-start="1534">設定控制器名稱，系統將自動執行該名稱對應的程式。</p>
+<h4 data-end="1586" data-start="1560">21. DEF 與 USE 的差異與用途</h4>
+<p data-end="1620" data-start="1587"><span>DEF </span>是定義具名物件，<span>USE </span>用來重複使用該物件，避免冗長複製。</p>
+<h4 data-end="1674" data-start="1622">22. translation 與 rotation 如何決定物件在 3D 空間的位置與朝向</h4>
+<p data-end="1713" data-start="1675"><span>translation </span>控制平移位置，<span>rotation </span>控制旋轉方向與角度。</p>
+<h4 data-end="1748" data-start="1715">23. 何謂 boundingObject 為何要指定</h4>
+<p data-end="1779" data-start="1749">用於物理碰撞與模擬，是<span> Solid </span>物件的不可或缺物理形狀。</p>
+<h4 data-end="1820" data-start="1781">24. 為什麼 link2 會包含 Pose 及多個子 Shape</h4>
+<p data-end="1858" data-start="1821"><span>Pose </span>讓內部物件具備相對位移，子<span> Shape </span>提供多種結構與外觀組合。</p>
+<h4 data-end="1890" data-start="1860">25. anchor 參數如何影響關節的運動中心</h4>
+<p data-end="1921" data-start="1891"><span>anchor </span>設定關節的旋轉中心，會影響關節的實際運動軌跡。</p>
+<h4 data-end="1949" data-start="1923">26. 四連桿結構在此場景的設計意圖為何</h4>
+<p data-end="1977" data-start="1950">用於模擬穩定可控的傳動系統，適合投擲機或仿生運動應用。</p>
+<h4 data-end="2010" data-start="1979">27. 如何在 Webots 檢查各關節的運動範圍</h4>
+<p data-end="2065" data-start="2011">可觀察<span> motor.getPosition() </span>數值，或設定<span> jointParameters </span>中的限制參數。</p>
+<h4 data-end="2098" data-start="2067">28. 若要讓 link3 可動，需在何處設定馬達</h4>
+<p data-end="2146" data-start="2099">在連接到<span> link3 </span>的<span> HingeJoint </span>中新增<span> RotationalMotor </span>裝置。</p>
+<h4 data-end="2175" data-start="2148">29. 場景中透明的 base 有什麼作用</h4>
+<p data-end="2209" data-start="2176">作為支撐參考物或對齊座標的基礎結構，但不希望被視覺干擾而設為透明。</p>
+<h4 data-end="2242" data-start="2211">30. 製作此場景時，應注意哪些結構層級與命名規則</h4>
+<p data-end="2275" data-start="2243">結構需清楚階層嵌套，命名應具描述性與一致性，便於維護與程式控制</p>
+<p> </p>
+<p> </p><br />Exam << <a href='Exam.html'>Previous</a> <a href='Exam2.html'>Next</a> >> Exam2</div>
         
     <!-- footer -->
       <div class="container">

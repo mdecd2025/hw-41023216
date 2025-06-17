@@ -148,7 +148,71 @@ img.add_border {
 <p><a href="./../downloads/hw1.rar">hw1</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/sdz1FOfAAMA" title="國立虎尾科技大學 - 機械設計工程系 - cd2025 HW1 - 41023216" width="1265"></iframe></p>
 <p>建立robot<br/>新增solid 兩個hingjoint<br/>命名為base joint1 joint4<br/>在children中新增shape並命名為base<br/>新增外觀去跟換顏色 我設定1，0.5，0.6<br/>在geomotry新增box 設定1，0.1，0.1<br/>在bounding新增use base<br/>joint1 pose位置設定為translation -0.5，0，0 rotation 0，0，1.57<br/>joint2 pose位置設定為translation 0.4，0，0.1 rotation 0，-1，0.9<br/>joint3 pose位置設定為translation 0.6，0，-0.1 rotation 0，-1，1.64<br/>joint1 shape位置設定為translation 0.2，0，0.1 box 0.4，0.1，0.1<br/>joint2 shape位置設定為translation 0.28，0，0.1 rotation 0.6，0.1，0.1<br/>joint3 shape位置設定為translation 0.48，0，0.1 rotation 0.9，0.1，0.1<br/>在jonit1、2、3中的children中新增shape並命名為link1、2、3_shape<br/>在joint1 的shape下新增hingjoint命名為joint2<br/>joint1、2、3分別開啟bounding 以及physics<br/>在joint4用solidreference 用link3<br/>在controller選擇程式 fourbar_controller1</p>
-<p>在過程中有不斷的失誤造成自己不斷的重作，像自己忘記存檔，就按到重製，也有自己漏了步驟，找了很久，卻找不到問題，而重做，但也讓我自己可以對webots比較熟練。</p><br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
+<p>在過程中有不斷的失誤造成自己不斷的重作，像自己忘記存檔，就按到重製，也有自己漏了步驟，找了很久，卻找不到問題，而重做，但也讓我自己可以對webots比較熟練。</p>
+<p></p>
+<h4 data-end="106" data-start="58">1. 在製作 HW1 之前是否實際練習 Tutorial1 與 Tutorial2？</h4>
+<p data-end="144" data-start="107">是，這兩個教學能幫助使用者熟悉 Webots 的基本操作與控制器開發流程。</p>
+<h4 data-end="178" data-start="146">2. Webots 是什麼樣的軟體？它主要用途為何？</h4>
+<p data-end="218" data-start="179">Webots 是一套開源的機器人模擬軟體，主要用於機器人模擬、開發與教育訓練。</p>
+<h4 data-end="264" data-start="220">3. 在 Tutorial1 中，學習者需要操作的主要機器人模型名稱是什麼？</h4>
+<p data-end="276" data-start="265">e-puck 機器人。</p>
+<h4 data-end="320" data-start="278">4. 如何在 Webots 中建立並執行一個新的模擬世界（world）？</h4>
+<p data-end="363" data-start="321">點選 File &gt; New World 建立新世界，儲存後按 Run 即可開始模擬。</p>
+<h4>5. 請說明如何讓機器人在模擬中移動，並指出相關的程式控制方式。</h4>
+<p data-end="447" data-start="404">使用控制器設定馬達速度，例如使用 motor.setVelocity() 來移動輪子。</p>
+<h4>6. Tutorial1 中，學習者需要修改哪些參數或檔案來控制機器人的行為？</h4>
+<p data-end="528" data-start="495">需修改控制器程式中的感測器與馬達參數，通常為 Python 檔案。</p>
+<h4>7. 請簡述 Webots 控制器的功能及其與機器人的關係。</h4>
+<p data-end="598" data-start="567">控制器是用來控制機器人行為的程式，每個機器人可綁定一個控制器。</p>
+<h4>8. 在 Tutorial2 中，機器人需要完成什麼樣的任務或行為？</h4>
+<p data-end="654" data-start="641">主要任務為路徑追蹤與避障。</p>
+<p><strong>9. Webots 中的 Supervisor 是什麼？與一般控制器有何不同？</strong></p>
+<p data-end="743" data-start="702">Supervisor 是模擬的總控制器，可以控制整個場景與其他機器人的狀態或位置。</p>
+<h4>10. 請說明如何在 Webots 中讀取感測器數據並應用。</h4>
+<p data-end="835" data-start="782">使用感測器 API，如 distance_sensor.getValue() 來讀取資料，並用來控制行為。</p>
+<h4>11. 若要延伸 Tutorial2 讓機器人具備避障能力，該如何設計與實作？</h4>
+<p data-end="911" data-start="883">可使用距離感測器資料判斷障礙物位置，並調整輪子速度避開。</p>
+<h4>12. 請說明 Webots 中時間步長（timestep）的意義與影響。</h4>
+<p data-end="998" data-start="957">timestep 是模擬中每次更新的時間間隔，單位為毫秒，影響模擬的精度與穩定性。</p>
+<h4>13. 如何在 Webots 中為機器人新增感測器？</h4>
+<p data-end="1078" data-start="1033">在 .wbt 或 .proto 檔加入感測器元件，控制器中初始化並呼叫 enable()。</p>
+<h4>14. 如何將 Webots 控制器程式從 Python 改為 C？</h4>
+<p data-end="1157" data-start="1121">建立 C 控制器檔並設定控制器類型為 C，在機器人屬性中指向新的控制器。</p>
+<h4>15. 若控制器程式有錯誤，Webots 會如何反應？</h4>
+<p data-end="1226" data-start="1193">會在 Console 顯示錯誤訊息，需根據訊息排除錯誤並重新執行。</p>
+<h4>16. 如何分享 Webots 的世界檔與設定？</h4>
+<p data-end="1302" data-start="1259">將 .wbt、.proto 檔及 controllers 資料夾打包壓縮後傳送給他人。</p>
+<h4>17. 若要讓機器人發出聲音或播放音樂，Webots 提供什麼方法？</h4>
+<p data-end="1369" data-start="1345">可使用 Speaker 元件播放音效檔案或語音。</p>
+<h4>18. 如何同時操作多個機器人並執行不同控制器？</h4>
+<p data-end="1427" data-start="1402">在世界中加入多台機器人，分別設定不同的控制器名稱。</p>
+<h4>19. 如何獲得機器人的座標與朝向？</h4>
+<p data-end="1518" data-start="1454">使用 Supervisor API，例如 getSelf().getPosition() 或 getOrientation()。</p>
+<h4>20. 感測器資料的單位為何？如何解讀？</h4>
+<p data-end="1579" data-start="1547">距離感測器單位為公尺，加速度為 m/s²，需參考感測器規格轉換。</p>
+<p><strong>21. 如何錄製模擬畫面並輸出成影片？</strong></p>
+<p data-end="1649" data-start="1607">從功能表選擇 Movie &gt; Start recording，模擬後停止並匯出影片。</p>
+<h4>22. Webots 中的 PROTO 有什麼作用？與 .wbt 檔有何關聯？</h4>
+<p data-end="1732" data-start="1697">PROTO 定義機器人或元件的結構，可在 .wbt 世界中實例化使用。</p>
+<h4>23. 如何設定機器人的初始位置與方向？</h4>
+<p data-end="1801" data-start="1761">在場景中選取機器人，在屬性中設定 translation 與 rotation。</p>
+<h4>24. 如何讓機器人執行自訂動作？</h4>
+<p data-end="1854" data-start="1827">透過撰寫控制器程式自定義行為邏輯，執行特定移動或反應。</p>
+<h4>25. Webots 支援哪些控制語言？各有何優缺點？</h4>
+<p data-end="1948" data-start="1890">支援 Python、C、C++、Java、MATLAB。Python 易學，C 效能高，MATLAB 適合數據分析。</p>
+<h4>26. 控制器如何與外部程式通訊？</h4>
+<p data-end="2008" data-start="1974">可透過 socket、Web API、ROS 等進行資料交換或控制。</p>
+<h4>27. 燈光與陰影對感測器數據有什麼影響？</h4>
+<p data-end="2064" data-start="2038">會影響相機成像與紅外線感測效果，需適當調整光源配置。</p>
+<h4>28. 如何調整物理參數如質量與摩擦係數？</h4>
+<p data-end="2134" data-start="2094">在機器人元件的 Physics 屬性中設定 mass、friction 等參數。</p>
+<h4>29. 如何使用 Console 與 Debug 工具協助排錯？</h4>
+<p data-end="2210" data-start="2175">觀察 Console 訊息，搭配 print 訊息與斷點方式追蹤錯誤。</p>
+<h4>30. 碰撞偵測機制如何運作？</h4>
+<p data-end="2262" data-start="2234">可使用 bumper 或距離感測器檢測接觸或靠近障礙物。</p>
+<h4>31. 如何導出模擬結果並進行數據分析？</h4>
+<p data-end="2333" data-start="2291">控制器中將資料輸出成 CSV 檔，再使用 Excel 或 Python 等工具分析。</p>
+<br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
         
     <!-- footer -->
       <div class="container">
